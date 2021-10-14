@@ -50,7 +50,6 @@ def cdiag(a):
     Aim = torch.diag(a[1,:])
     return torch.cat((Are.unsqueeze(0), Aim.unsqueeze(0)), 0)
 
-
 def cdiv(A):
     Are = torch.diag(torch.div(torch.diag(A[0,:]),torch.diag(A[0,:])**2+torch.diag(A[1,:])**2))
     Aim = torch.diag(torch.div(-torch.diag(A[1,:]),torch.diag(A[0,:])**2+torch.diag(A[1,:])**2))
@@ -92,7 +91,6 @@ def laplace_temp(A, idx, jdx):
     return torch.cat((A_real.unsqueeze(0),A_imag.unsqueeze(0)),0)
 
 def complex_det(A):
-    #?????????
     n = A.size(1)
     if n == 1:
         return torch.cat((A[0,0,0].unsqueeze(0),A[1,0,0].unsqueeze(0)),0)
@@ -101,5 +99,3 @@ def complex_det(A):
         for j in range(n):
             det += (-1)**((2+j)%2)*cmul2(mcat(A[0,0,j],A[1,0,j]),complex_det(laplace_temp(A,0,j)))
         return det
-
- 
