@@ -1,5 +1,5 @@
 # DLDUNN
-In this repository, code is for our PIMRC 2021 paper [Hybrid Precoding Design Based on Dual-Layer Deep-Unfolding Neural Network](https://ieeexplore.ieee.org/document/9569633)
+In this repository, code is for our 2021 IEEE PIMRC paper [Hybrid Precoding Design Based on Dual-Layer Deep-Unfolding Neural Network](https://ieeexplore.ieee.org/document/9569633)
 
 ## Requirements
 * Python >= 3.6
